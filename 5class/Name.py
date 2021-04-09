@@ -1,0 +1,7 @@
+name = input('как тебя зовут')
+print("Привет",name)
+old = int(input('сколько тебе лет'))
+print('а мне',old - 5)
+a = int(input('введите число а'))
+b = int(input('введите число б'))
+print('произведение чисел:', a * b)
