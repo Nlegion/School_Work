@@ -10,3 +10,10 @@ print(type(fnum))
 
 string = "какой то текст"
 print(type(string))
+
+list = ['слово', 1, 1.2, True]
+print(type(list))
+
+print(list[0])
+print(list[2])
+print(type(list[2]))
