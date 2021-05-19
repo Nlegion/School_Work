@@ -1,24 +1,28 @@
-import turtle as t # использовать библиотеку как t
+import turtle
 import time
+turtle.pensize(5)
+turtle.speed(10)
+turtle.pencolor("black")
+turtle.circle(50)
+turtle.penup()
+turtle.goto(50,-50)
+turtle.pencolor("orange")
+turtle.pendown()
+turtle.circle(50)
+turtle.penup()
+turtle.goto(80,0)
+turtle.pencolor("red")
+turtle.pendown()
+turtle.circle(50)
+turtle.penup()
+turtle.goto(120,-50)
+turtle.pencolor("blue")
+turtle.pendown()
+turtle.circle(50)
+turtle.penup()
+turtle.goto(165,0)
+turtle.pencolor("green")
+turtle.pendown()
+turtle.circle(50)
+time.sleep(5)
 
-t.reset() # начать заново (обнулить параметры)
-t.speed(10) # скорость выполнения  от 1 (медленно) до 100 (быстро)
-t.pensize(3) # размер линии
-for item in range(3): # цикл с количеством действий, item  - переменная счетчик (№ текущего шага)
-    for sq in range(4):
-        t.fd(20) # вперед (кол-во пикселей вперед)
-        t.rt(90) # поворот вправо на 90 градусов
-    t.fd(20)  # вперед (кол-во пикселей вперед)
-    t.rt(90)  # поворот вправо на 90 градусов
-    t.fd(20)  # вперед (кол-во пикселей вперед)
-    t.lt(90)  # поворот влево на 90 градусов
-
-for item in range(2): # цикл с количеством действий, item  - переменная счетчик (№ текущего шага)
-    t.lt(90)  # поворот влево на 90 градусов
-    t.fd(20)
-    for sq in range(4):
-        t.fd(20) # вперед (кол-во пикселей вперед)
-        t.rt(90) # поворот вправо на 90 градусов
-    t.rt(90)  # поворот влево на 90 градусов
-    t.fd(20)
-    time.sleep(2) # стоп на 2 сек
