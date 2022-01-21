@@ -1,0 +1,37 @@
+import turtle as t
+import time
+t.speed(1)
+t.color('black')
+for item in range(4):
+    t.fd(115)
+    t.lt(90)
+t.color('black')
+t.penup()
+t.fd(10)
+t.lt(90)
+t.fd(10)
+t.rt(90)
+t.pendown()
+t.color('green')
+for item in range(4):
+    t.fd(40)
+    t.lt(90)
+t.penup()
+t.fd(25)
+t.lt(90)
+t.fd(25)
+t.rt(90)
+t.pendown()
+for item in range(4):
+    t.fd(50)
+    t.lt(90)
+t.penup()
+t.fd(30)
+t.lt(90)
+t.fd(30)
+t.rt(90)
+t.pendown()
+for item in range(4):
+    t.fd(40)
+    t.lt(90)
+time.sleep(10)

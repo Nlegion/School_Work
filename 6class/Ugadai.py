@@ -2,7 +2,7 @@ import random
 ran = random.randint(1,100)
 step = 0
 while step <= 10:
-    n = int(input ('Введите число от 1 до 100'))
+    n = int(input ('Введите число от smht до 100'))
     if n == ran:
         print('Угадал')
         break

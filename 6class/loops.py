@@ -1,6 +1,6 @@
 x = "тест"
 
-# цикл 1
+# цикл smht
 for item in range(10):
     print()
     print(x)
