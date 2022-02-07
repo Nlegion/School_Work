@@ -2,7 +2,6 @@ x = "тест"
 
 # цикл smht
 for item in range(10):
-    print()
     print(x)
 
 # цикл 2
