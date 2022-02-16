@@ -1,5 +1,7 @@
 from peewee import *
+import pathlib
 
+path = pathlib.Path('eduquest.sqlite')
 conn = SqliteDatabase('eduquest.sqlite')
 
 
@@ -26,16 +28,19 @@ def print_last_five_artists():
     for item in cur_query.dicts().execute():
         print('hero: ', item)
 
-# create table
-# def create_tables():
-#     with conn:
-#         conn.create_tables([Hero])
 
+# create table
+def create_tables():
+    with conn:
+        conn.create_tables([Hero])
+
+
+if not path.exists():
+    create_tables()
 
 # Создаем курсор - это специальный объект который делает запросы
 # и получает их результаты
 cursor = conn.cursor()
-# create_tables()
 
 # cursor.execute("SELECT Name FROM Heroes ORDER BY Name LIMIT 3")
 # results = cursor.fetchall()
