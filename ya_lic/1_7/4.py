@@ -9,26 +9,28 @@
 #
 # # После каждого вопроса строки считаются заново.
 
-x = '1'
-y = 0
-z = 0
-last = ''
-while x != '':
-    x = input()
-    if x == 'добрый':
-        y += 1
-        last = x
-    elif x == 'злой':
-        z += 1
-        last = x
-    elif x == 'Какой подарок?':
-        if y > z & (last == 'добрый'):
+good = bad = 0
+prev_answer = None
+while True:
+    lin = input()
+
+    if lin == 'Какой подарок?':
+        if good > bad and prev_answer == 'добрый':
             print('серебряный шиллинг')
-        elif (y < z) & (last == 'злой'):
+        elif good < bad and prev_answer == 'злой':
             print('золотой')
         else:
             print('Ах, не знаю!')
             break
-        y = 0
-        z = 0
-        last = ''
+        good = bad = 0
+        prev_answer = None
+        continue
+    elif lin == 'добрый':
+        good += 1
+    elif lin == 'злой':
+        bad += 1
+    elif lin == '':
+        break
+    else:
+        continue
+    prev_answer = lin
