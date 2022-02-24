@@ -11,12 +11,32 @@ x = int(input())
 y = int(input())
 z = int(input())
 v = 0
-if (y + 1) % z != 0:
-    z -= 1
+b = z
+if y % b != 0:
+    b -= 1
+
 for item in range(x, y + 1, z):
     for item_2 in range(x, y + 1, z):
         v += 1
-        if v % z != 0:
+        if v % b != 0:
             print(f'{item} + {item_2} = {item + item_2}\t', end='')
         else:
             print(f'{item} + {item_2} = {item + item_2}')
+
+n = int(input())
+k = int(input())
+st = int(input())
+nst = n
+nn = n
+for i in range(k):
+    for j in range(k):
+        print(n, '+', nn, '=', n + nn, sep=' ', end='\t')
+        nn += st
+        nk = nn
+        if nn > k:
+            break
+    n += st
+    nn = nst
+    if n == nk:
+        break
+    print()
