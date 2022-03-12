@@ -17,7 +17,7 @@ while z != '':
 fish_al = fish[:]
 fish_le = fish[:]
 for i in range(len(fish_al) - 1):
-    for j in range(len(fish_al) - i - 1):
+    for j in range(len(fish_al) - i - 1) :
         if fish_al[j] > fish_al[j + 1]:
             fish_al[j], fish_al[j + 1] = fish_al[j + 1], fish_al[j]
 for i in range(len(fish_le) - 1):
