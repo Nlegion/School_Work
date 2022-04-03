@@ -9,3 +9,21 @@
 #
 # Формат вывода
 # Выведите полученное дерево сверху вниз.
+
+a = [int(i) for i in input().split()]
+b = [a]
+while len(a) > 1:
+    c = []
+    k = 0
+    if len(a) % 2 != 0:
+        a.append(0)
+        k = 1
+    for i in range(0, len(a), 2):
+        c.append(a[i] + a[i + 1])
+    if k:
+        del a[len(a) - 1]
+    a = c
+    b.append(c)
+b = b[::-1]
+for i in b:
+    print(*i)

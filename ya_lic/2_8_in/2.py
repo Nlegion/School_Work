@@ -5,3 +5,22 @@
 #
 # Формат вывода
 # Поменяйте местами элементы главной и побочной диагоналей и выведите числа в строках матрицы через пробел, затем сумму чисел на главной и побочной диагоналях.
+
+a = []
+x = int(input())
+a = [[int(i) for i in input().split(', ')] for j in range(x)]
+k = x
+s = 0
+for i in range(x):
+    k -= 1
+    for j in range(x):
+        if i == j:
+            a[i][j], a[i][k] = a[i][k], a[i][j]
+            s += a[i][j]
+            s += a[i][k]
+for i in range(x):
+    k -= 1
+    for j in range(x):
+        print(a[i][j], end=' ')
+    print()
+print(s)

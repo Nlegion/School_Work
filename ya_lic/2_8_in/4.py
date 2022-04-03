@@ -27,3 +27,54 @@
 # 0 0 □ □ □ 0 0 0 0 0
 # 0 0 0 0 0 0 0 0 0 0
 # 0 0 0 0 0 0 □ □ □ 0
+
+f = [[0 for y in range(10)] for t in range(10)]
+o = [1]
+b = [2, 3]
+c = [4, 5, 6]
+v = [7, 8, 9, 10]
+for s in range(1, 11):
+    a, m = input().split()
+    y = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    i = ["а", "б", "в", "г", "д", "е", "ж", "з", "и", "к"]
+    if len(a) < 3:
+        e = a[1]
+    else:
+        e = a[1] + a[2]
+    r = y[i.index(a[0])]
+    if s in o:
+        if m == 'в':
+            f[int(e) - 1][r - 1] = "\u25A1"
+            f[int(e)][r - 1] = "\u25A1"
+            f[int(e) + 1][r - 1] = "\u25A1"
+            f[int(e) + 2][r - 1] = "\u25A1"
+        else:
+            f[int(e) - 1][r - 1] = "\u25A1"
+            f[int(e) - 1][r] = "\u25A1"
+            f[int(e) - 1][r + 1] = "\u25A1"
+            f[int(e) - 1][r + 2] = "\u25A1"
+    if s in b:
+        if m == 'в':
+            f[int(e) - 1][r - 1] = "\u25A1"
+            f[int(e)][r - 1] = "\u25A1"
+            f[int(e) + 1][r - 1] = "\u25A1"
+        else:
+            f[int(e) - 1][r - 1] = "\u25A1"
+            f[int(e) - 1][r] = "\u25A1"
+            f[int(e) - 1][r + 1] = "\u25A1"
+    if s in c:
+        if m == 'в':
+            f[int(e) - 1][r - 1] = "\u25A1"
+            f[int(e)][r - 1] = "\u25A1"
+        else:
+            f[int(e) - 1][r - 1] = "\u25A1"
+            f[int(e) - 1][r] = "\u25A1"
+    if s in v:
+        if m == 'в':
+            f[int(e) - 1][r - 1] = "\u25A1"
+        else:
+            f[int(e) - 1][r - 1] = "\u25A1"
+for n in f:
+    for x in n:
+        print(x, end=' ')
+    print()

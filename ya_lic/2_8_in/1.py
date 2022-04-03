@@ -18,21 +18,16 @@
 # 8	12	0	0
 # 0	0	8	0
 # 14	12	9	0
-i = '1'
-z = []
-y = []
-t = []
-while True:
-    i = input()
-    if i != '':
-        z.append([int(item) for item in i.split(':')])
-    else:
-        break
-# x = int(input())
-for itr in range(len(z)):
-    for itr2 in z[itr]:
-        if itr2 < 8:
-            t.append(0)
+a = []
+s = input()
+while s != '':
+    a.append(s.split(' : '))
+    s = input()
+x = int(input())
+for i in range(len(a)):
+    for j in range(len(a[0])):
+        if int(a[i][j]) >= x:
+            print(a[i][j], end='\t')
         else:
-            t.append(itr2)
-        print(t)
+            print('0', end='\t')
+    print()
