@@ -1,10 +1,8 @@
-a=int(input())
-s=1000
-for i in range(a):
-    if i<s:
-        s=i
-if s<-15:
-    print("YES")
-else:
-    print("NO")
+import pymorphy2
 
+morph = pymorphy2.MorphAnalyzer()
+
+
+def russian_noun(s, case='nomn', number='sing'):
+    word = morph.parse(s)[0]
+    return word.inflect({case, number}).word

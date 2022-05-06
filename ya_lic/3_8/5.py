@@ -18,3 +18,14 @@
 # 20 10 1
 # ALUMINUM CUCUMBERS
 # Пример 2
+
+def f(txt):
+    for i in txt.splitlines():
+        arr = i.split()
+        tmp = sum(map(lambda x: '0' in x, arr))
+        if tmp > len(arr) - tmp:
+            return 'ALUMINUM CUCUMBERS'
+    return 'EVERGREEN TOMATOES'
+
+
+print(f(input()))

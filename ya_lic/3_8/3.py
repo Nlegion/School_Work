@@ -14,5 +14,4 @@
 # 3; 2; 1; 10; 1
 # 2; 0; 3; 1; 2; 2
 # OK
-
 print(('OK', 'FAIL')[all([any(map(lambda x: x != 0 and not x % 5, map(int, i.split('; ')))) for i in iter(input, '')])])

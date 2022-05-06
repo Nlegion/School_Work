@@ -8,3 +8,12 @@
 # points = [(1, 1), (-1, 2), (-3, -1)]
 # print(*defense(*points))
 
+def defense(*args):
+    x_min, y_min = (float('inf') for _ in ':(')
+    x_max, y_max = (float('-inf') for _ in ':)')
+    for x, y in args:
+        x_min = (x_min, x)[x < x_min]
+        y_min = (y_min, y)[y < y_min]
+        x_max = (x_max, x)[x > x_max]
+        y_max = (y_max, y)[y > y_max]
+    return (abs(x_min), -x_min)[x_min > 0] + x_max, (abs(y_min), -y_min)[y_min > 0] + y_max

@@ -15,3 +15,15 @@
 # {2000000000: 110, 6: 4}
 # Примечания
 # В задаче нельзя использовать инструкцию global.
+
+def number_of_divisors(N):
+    c = []
+    count = 0
+    for j in range(1, int(N ** 0.5) + 1):
+        if N % j == 0:
+            count += 1
+    if float(N ** 0.5) != int(i ** 0.5):
+        c.append(2 * count)
+    else:
+        c.append(2 * count - 1)
+    return count

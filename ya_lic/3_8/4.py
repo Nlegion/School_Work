@@ -26,8 +26,13 @@
 # oberon
 # script
 
+
+def foo(x):
+    return lambda s: sum(y in vowel if x == '0' else y not in vowel for x, y in zip(p, s))
+
+
 p = input()
 *a, = iter(input, '')
 vowel = 'aeouiy'
-foo = lambda s: sum(y in vowel if x == '0' else y not in vowel for x, y in zip(p, s))
-print(*sorted(a, key=lambda x: (-foo(x), x[::-1])), sep='\n')
+
+print(*sorted(a, key=lambda x: (foo(x), x[::-1])), sep='\n')
