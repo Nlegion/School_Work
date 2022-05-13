@@ -17,3 +17,7 @@
 #         lambda result: 1 / result if conductivity else result)(
 #         sum(data) if connection == 'serial' else 1 / sum(1 / r for r in data))
 #     return t
+def circuit_resistance(*data):
+    return lambda *data, connection='serial', conductivity=False: (
+        lambda result: 1 / result if conductivity else result)(
+        sum(data) if connection == 'serial' else 1 / sum(1 / r for r in data))

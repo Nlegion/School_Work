@@ -9,3 +9,5 @@
 # print(data)
 # ['three', 'one', 'two']
 
+def sorting_bis(x, y):
+    data.sort(key=len if x == 'len' else None, reverse=y)

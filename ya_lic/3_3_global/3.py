@@ -14,3 +14,14 @@
 # 3
 # История решений
 
+def args_counter():
+    res = {}
+
+    def inner(arg):
+        res[arg] = res.get(arg, 0) + 1
+        return res[arg]
+
+    return inner
+
+
+diversity = args_counter()

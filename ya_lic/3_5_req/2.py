@@ -11,3 +11,10 @@
 # text = "abracadabra"
 # print(change(text, "a", "o"))
 # obrocodobro
+def change(line, sub, symb):
+    if line == '':
+        return ''
+    elif line[0] == sub:
+        return symb + change(line[1:], sub, symb)
+    else:
+        return line[0] + change(line[1:], sub, symb)

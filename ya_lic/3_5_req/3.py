@@ -9,19 +9,12 @@
 # Пример 2
 
 
-def power(a, n):
-    if a == 0:
-        return 0
-    elif n == 0:
-        return 1
-    elif n == 1:
-        return a
-    elif n < 0:
-        return 1 / (a * power(a, -n - 1))
+def power(x, p):
+    if (p == 1 or p == -1):
+        return x if p == 1 else (1 / x)
+    if p > 1:
+        return x * power(x, p - 1)
+    elif p < -1:
+        return (1 / x) * power(x, p + 1)
     else:
-        return a * power(a, n - 1)
-
-
-a = float(input())
-n = int(input())
-print(power(a, n)
+        return 1

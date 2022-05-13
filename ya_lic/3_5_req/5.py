@@ -10,3 +10,11 @@
 # Ввод	Вывод
 # print(happy_number(96251231254621))
 # [28, 21]
+def happy_number(c, a=0, b=0):
+    c = str(c)
+    if len(c) == 0:
+        return [a, b]
+    a += int(c[0])
+    b += int(c[-1])
+    c = c[1:-1]
+    return happy_number(c, a, b)

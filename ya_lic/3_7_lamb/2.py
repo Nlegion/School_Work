@@ -25,7 +25,3 @@ def condition(x):
 def separator(n):
     return list(filter(condition, map(int, n.split(" ")))), list(
         filter(lambda v: not condition(v), map(int, n.split(" "))))
-
-
-s = "10 -4 5 12 -6 9 0 -6 11 -7 1"
-print(*separator(s))

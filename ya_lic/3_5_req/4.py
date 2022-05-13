@@ -12,3 +12,13 @@
 # Ввод	Вывод
 # print(degree_indicator(1 / 625, 5))
 # -4
+def degree_indicator(n, base):
+    if n == base:
+        return 1
+    if n > 1:
+        return 1 + degree_indicator(n // base, base)
+    if n < 1:
+        x = 1 / n
+        return -(1 + degree_indicator(x // base, base))
+    if n < base:
+        return 0

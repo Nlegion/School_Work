@@ -9,3 +9,5 @@
 # print(data)
 # [148, 16, 5, 2]
 
+def sorting_triple(k: str, eq: bool):
+    data.sort(key=lambda x: len(str(x)) if k == 'len' else x, reverse=eq)

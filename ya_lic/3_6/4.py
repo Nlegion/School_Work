@@ -13,3 +13,14 @@
 # const = {'charge': 1.6, 'alpha': 0.137, 'pi': 3.14}
 # print(future(*mass, **const))
 
+from functools import reduce
+
+
+def future(*mass, **const):
+    global VIN
+    sum_of_masses = sum(mass) * reduce(lambda x, y: x * y, const.values())
+    if sum_of_masses > VIN:
+        return 'ACCELERATION'
+    elif sum_of_masses < VIN:
+        return 'DECELERATION'
+    return 'UNCHANGED'
